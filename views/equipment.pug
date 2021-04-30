@@ -1,0 +1,33 @@
+extends base.pug
+
+block content
+    h1#simple Well done!
+    p #{csanum}
+    br
+    div(style="margin:0; border:1px solid gray; width: 40%")
+        form(action="/equipment/submit" method="POST")
+            label #{title}
+            p this is the equipment page
+            label what equipment will you be getting?
+            input(type="text" name="nameOfEquipment" style="border:1px black solid; width:12%")
+            label What is the name of your vendor?
+            input(type="text" name="VendorName" style="border:1px black solid; width:12%")
+            label what is the name of the sales person?
+            input(type="text" name="nameOfContact" style="border:1px black solid; width:12%")
+            label what is the direct phone number for the sales person?
+            input(type="text" name="phoneNumber" style="border:1px black solid; width:12%")
+            label How much are you expecting to make every month with this purchase?
+            input(type="text" name="roi" style="border:1px black solid; width:12%")
+            label When do you need this installed by?
+            input(type="date" name="dateOfInstallation" style="border:1px black solid; width:12%")
+            label Street Address
+            input(type="text" name="streetEq" style="border:1px black solid; width:12%")
+            label City
+            input(type="text" name="cityEq" style="border:1px black solid; width:12%")
+            label Zip Code
+            input(type="text" name="zipcodeEq" style="border:1px black solid; width:12%")
+            label What is the cost of the equipment?(including tax + delivery)
+            input(type="text" name="coe" style="border:1px black solid; width:12%")
+            label How much do you want to pay a month?
+            input(type="text" name="budget" style="border:1px black solid; width:12%")
+            input(type="submit" name="Done")

@@ -1,0 +1,10 @@
+extends base.pug
+
+block content
+    h1#simple This is POST
+    br
+    form(action="/" method="post")
+        label #{title}
+        input(type="text" name="csa")
+        input(type="text" name="tib")
+        input(type="submit" name="Done")

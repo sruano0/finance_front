@@ -1,0 +1,11 @@
+extends base.pug
+
+block content
+    h1#simple This is get
+    br
+    form(action="/submit-form-with-get" method="get")
+        input(type="text" name="first")
+        br
+        input(type="text" name="last")
+        br
+        input(type="submit" name="Done")

@@ -1,0 +1,77 @@
+extends base.pug
+
+block content
+    div#app.container
+        div#logo
+            img(src="https://image.flaticon.com/icons/svg/216/216736.svg",style="width:5%")
+        nav
+            a.logIn(style="cursor:pointer" onclick="boton()") Apply Now
+            a.vendorLogin(href="") Vendor Login
+        main
+        div#signIn
+            br
+            h1 GET YOUR PAYMENT OPTIONS
+            span It's quick, easy, and no credit pulls.
+            span#startingPoint 
+                b Let's Start Here!: 
+            form(method="POST", action="/equipment")
+                label#business_label(for="business") 
+                    small Business Name:
+                input#business(type="text" name="csa" size="30" placeholder="Business Name" required autofocus)
+                label#email_label(for="Email") 
+                    small E-mail:
+                input#email(type="email" name="tib" pattern=".+@.+.com" size="30" placeholder="email@email.com" required)
+                br
+                div
+                    h5 What does yout business require?
+                    input#eqFinance.radio(type="radio" value="Finance Eq" name="choice" checked)
+                    label(for="eqFinance") Finance Equipment
+                    input.radio(type="radio" value="Working Capital" name="choice")
+                    label(for="working_capital") Working Capital
+                    br
+                    input.radio(type="radio" value="Lease Equipment" name="choice")
+                    label(for="working_capital") Lease Equipment
+                    br
+                    p(style="color:red;font-size:12px")  Complete a questionnare in 5 minutes, pick the option that best suits your business, and get funded!
+
+                button.button(type="submit" name="submit")
+                    b GET STARTED
+            br
+        div#content1
+            div.image_container
+                img(src="https://d29fhpw069ctt2.cloudfront.net/icon/image/47984/preview.svg", style="width:40%")
+        div#content2
+            h2.header_email What Will the e-mail be used for?
+            p What is Lorem Ipsum What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+        div#content3
+            h2.header_email Tell me, Whats better?
+            p
+                small Spend 35 minutes on the phone and no exact options.
+                br 
+                p or
+                p 5 minutes, answer questions, ang get your paymment options.
+        div#content4 
+            div.image_container 
+                img(src="https://image.flaticon.com/icons/svg/330/330716.svg", style="width:40%")
+        div#content5 
+            h4 Answer all the same questions you would over the phone in the comfort of your home. 
+            br
+            h1 What are you waiting for?
+            br
+            button.button(type="submit" name="submit" onclick="boton()")
+                b GET MY PAYMENT OPTION
+        footer
+            div#footer_left(style="width:50%")
+                a(href="") About Us
+                a(href="") Working Capital Programs 
+                a(href="") Equiment Financing & Leasing Programs 
+                br
+                a(href="#logo") Vendor Login
+                a(onclick="boton()" style="cursor:pointer") Apply Now
+            div#footer_right(style="width:50%")
+                ul
+                    li Business Name
+                    li Office Number: 949.988.0915
+                    li contactus@email.com 
+                    li
+                        img(src="https://image.flaticon.com/icons/svg/216/216736.svg" style="width:5%")
